@@ -1,0 +1,43 @@
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# SQLite databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Virtual environments
+venv/
+.venv/
+ENV/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Data exports
+*.csv
+*.txt
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Dependencies
+pip-log.txt
+pip-delete-this-directory.txt
