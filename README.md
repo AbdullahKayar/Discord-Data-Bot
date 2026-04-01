@@ -1,114 +1,55 @@
-# Discord Data Warehouse & OSINT Bot
+📊 Discord Data Warehouse & Analytics Bot
 
-## English
+🇹🇷 Türkçe Özet
 
-### Overview
-A powerful, open-source Discord bot built with Python for real-time data analysis, message archival, and server intelligence. Features role-based access control and secure data export capabilities.
+Bu proje, Discord sunucuları için geliştirilmiş gelişmiş bir Veri Ambarı ve OSINT botudur. Sunucudaki tüm mesaj trafiğini SQLite veritabanına işler, silinen/düzenlenen mesajları "Gölge Kayıt" olarak saklar ve yöneticilere CSV dökümü alma imkanı sunar.
 
-### Features
-- **Real-Time Data Scraping**: Automatically collect and index Discord messages, user metadata, and server events
-- **Shadow Logging**: Capture deleted and edited messages with timestamps for compliance and auditing
-- **Role-Based Access Control (RBAC)**: Admin-only command execution with granular permission levels
-- **Data Export**: Export analyzed data to CSV/Pandas DataFrames for external analysis
+🌟 Öne Çıkanlar
 
-### Tech Stack
-- Python 3.9+
-- discord.py
-- aiosqlite
-- Pandas
+Veri Madenciliği: Tüm geçmiş mesajları ve medyaları otomatik olarak arşive çeker.
 
-### Setup
+Gölge Kayıt: Silinen mesajlar asla kaybolmaz, veritabanında saklanır.
 
-1. **Clone Repository**
-    ```bash
-    git clone https://github.com/yourusername/discord-warehouse-bot.git
-    cd discord-warehouse-bot
-    ```
+Otonom Raporlama: Her hafta sunucu aktiflik özetini otomatik olarak raporlar.
 
-2. **Install Dependencies**
-    ```bash
-    pip install -r requirements.txt
-    ```
+RBAC Güvenliği: Rol bazlı yetkilendirme ile güvenli veri erişimi sağlar.
 
-3. **Environment Configuration**
-    ```bash
-    cp .env.example .env
-    # Edit .env with your Discord token and database path
-    ```
+🇬🇧 English Overview
 
-4. **Run Bot**
-    ```bash
-    python bot.py
-    ```
+An advanced Data Warehouse and OSINT bot designed for Discord servers. It logs all message traffic into a local SQLite database, maintains shadow records of deleted/edited messages, and allows administrators to export data as CSV files for analysis.
 
-### ⚠️ SECURITY WARNING
-**NEVER commit or share `.env` or `.db` files publicly.** These contain:
-- Discord bot tokens (allows account compromise)
-- Database with sensitive user data
-- API credentials
+🌟 Key Features
 
-Add to `.gitignore`:
-```
-.env
-*.db
-config.local
-```
+Data Scraping: Automatically archives message history and media attachments.
 
----
+Shadow Logging: Deleted messages are never lost; they are stored securely in the DB.
 
-## Türkçe
+Autonomous Reporting: Sends weekly server activity summaries automatically.
 
-### Genel Bakış
-Python ile geliştirilmiş, gerçek zamanlı Discord veri analizi, mesaj arşivleme ve sunucu istihbaratı için güçlü, açık kaynak bot.
+RBAC Security: Ensures secure data access with role-based permissions.
 
-### Özellikler
-- **Gerçek Zamanlı Veri Kazıması**: Discord mesajları, kullanıcı metaverisi ve sunucu olaylarını otomatik olarak toplayın
-- **Gölge Günlükleme**: Silinen ve düzenlenen mesajları zaman damgası ile kaydedin
-- **Rol Tabanlı Erişim Kontrolü (RBAC)**: Admin komutları için ayrıntılı izin seviyeleri
-- **Veri Dışa Aktarma**: Analiz edilen verileri CSV/Pandas formatında dışa aktarın
+🛠️ Installation / Kurulum
 
-### Teknoloji Yığını
-- Python 3.9+
-- discord.py
-- aiosqlite
-- Pandas
+Clone the repo: git clone https://github.com/AbdullahKayar/Discord-Data-Bot.git
 
-### Kurulum
+Install deps: pip install -r requirements.txt
 
-1. **Depoyu Klonlayın**
-    ```bash
-    git clone https://github.com/yourusername/discord-warehouse-bot.git
-    ```
+Setup environment: Create a .env file using the .env.example template.
 
-2. **Bağımlılıkları Yükleyin**
-    ```bash
-    pip install -r requirements.txt
-    ```
+Configure IDs: Open main.py and enter your Discord Channel IDs.
 
-3. **Ortam Yapılandırması**
-    ```bash
-    cp .env.example .env
-    # .env dosyasını Discord token ile düzenleyin
-    ```
+Run: python main.py
 
-4. **Botu Çalıştırın**
-    ```bash
-    python bot.py
-    ```
+📫 Connect with me / Bana Ulaşın
 
-### ⚠️ GÜVENLİK UYARISI
-**`.env` veya `.db` dosyalarını asla genel olarak paylaşmayın.** İçerirler:
-- Discord bot tokenları (hesap güvenliğini tehlikeye atar)
-- Hassas kullanıcı verilerini içeren veritabanı
-- API kimlik bilgileri
+Proje hakkında sorularınız varsa veya iş birliği yapmak isterseniz bana aşağıdaki kanallardan ulaşabilirsiniz:
 
-`.gitignore` dosyasına ekleyin:
-```
-.env
-*.db
-config.local
-```
+LinkedIn: linkedin.com/in/AbdullahKayar
 
----
+GitHub: github.com/AbdullahKayar
 
-**License**: MIT | **Contributions**: Welcome
+Email: abdullahkayar5231@gmail.com
+
+🛡️ Security & Privacy
+
+This bot keeps all data locally in server_archive.db. Never share your database file or .env token publicly on GitHub.
