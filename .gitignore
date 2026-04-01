@@ -1,43 +1,61 @@
-# Environment variables
+--- SECURITY (NEVER SHARE) ---
+
+Sensitive environment variables and tokens
+
 .env
 .env.local
 .env.*.local
 
-# SQLite databases
+--- DATABASE & DATA ---
+
+Database files containing message history
+
 *.db
 *.sqlite
 *.sqlite3
+server_archive.db
 
-# Virtual environments
-venv/
-.venv/
-ENV/
-env/
+Analysis exports and temporary data (May contain personal data)
 
-# Python cache
-__pycache__/
+*.csv
+
+--- FILE EXCEPTIONS (CRITICAL FOR INSTALLATION) ---
+
+Ignore all general text files (notes, drafts, etc.)
+
+*.txt
+
+EXCEPT requirements.txt (This MUST be visible for users to install dependencies)
+
+!requirements.txt
+
+--- PYTHON SYSTEM FILES ---
+
+pycache/
 *.py[cod]
 *$py.class
 *.so
 .Python
 
-# Data exports
-*.csv
-*.txt
+--- VIRTUAL ENVIRONMENTS ---
 
-# IDE
+Libraries are installed here locally; should not be uploaded
+
+venv/
+.venv/
+ENV/
+env/
+pip-log.txt
+pip-delete-this-directory.txt
+
+--- IDE & EDITOR SETTINGS ---
+
 .vscode/
 .idea/
 *.swp
 *.swo
 
-# OS
+--- OS SPECIFIC FILES ---
+
 .DS_Store
 Thumbs.db
-
-# Logs
-*.log
-
-# Dependencies
-pip-log.txt
-pip-delete-this-directory.txt
